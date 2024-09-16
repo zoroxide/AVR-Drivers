@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1725799590 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\fuse.c
+	<avr/io.h>
+
+1726475704 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\main.c
+	"interrubt/interrupt.h"
+	"io/io.h"
+
+1726013672 c:\loay mohamed files\projects\software\cpp\avrfreaks\usart\uart.h
+	<avr/io.h>
+	<avr/io.h>
+	<util/delay.h>
+	"uart.h"
+
+1725824611 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\usart\usart.c
+	"uart.h"
+	<avr/io.h>
+
+1726009342 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\lcd\lcd.c
+	"lcd.h"
+
+1726404575 c:\loay mohamed files\projects\software\cpp\avrfreaks\lcd\lcd.h
+	<avr/io.h>
+	<util/delay.h>
+
+1726473893 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\io\io.c
+	"io.h"
+
+1726474020 c:\loay mohamed files\projects\software\cpp\avrfreaks\io\io.h
+	<avr/io.h>
+
+1726239617 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\adc\adc.c
+	"adc.h"
+
+1726239625 c:\loay mohamed files\projects\software\cpp\avrfreaks\adc\adc.h
+	<avr/io.h>
+	<avr/io.h>
+	<util/delay.h>
+	"adc/adc.h"
+	"io/io.h"
+
+1726013627 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\usart\uart.c
+	"uart.h"
+
+1726467503 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\keypad\keypad.c
+	"keypad.h"
+
+1726467482 c:\loay mohamed files\projects\software\cpp\avrfreaks\keypad\keypad.h
+	"../lib/util_bits.h"
+	"../lib/Std_Types.h"
+	<avr/io.h>
+
+1726412017 c:\loay mohamed files\projects\software\cpp\avrfreaks\lib\util_bits.h
+
+1726411906 c:\loay mohamed files\projects\software\cpp\avrfreaks\lib\std_types.h
+
+1726475216 source:c:\loay mohamed files\projects\software\cpp\avrfreaks\interrubt\interrupt.c
+	"interrupt.h"
+
+1726475220 c:\loay mohamed files\projects\software\cpp\avrfreaks\interrubt\interrupt.h
+	<util/delay.h>
+	<avr/interrupt.h>
+
