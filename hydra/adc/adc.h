@@ -11,39 +11,39 @@ float LM35_getTemperature();
 
 /*
 
+#include "hydra/adc/adc.h"
+#include "hydra/io/io.h"
 #include <avr/io.h>
 #include <util/delay.h>
-#include "adc/adc.h"
-#include "io/io.h"
 
-int main(void)
-{
-    // Initialize the ADC
-    adc_init();
+int main(void) {
+  adc_init();
 
-    // Set PB0 as output for LED control
-    pinMode('C', 2, OUTPUT);
+  pinMode('C', 2, OUTPUT);
+  pinMode('C', 7, OUTPUT);
 
-    // Set PA0 as input for ADC (no need to explicitly set pinMode for analog input, but done for clarity)
-    pinMode('A', 1, INPUT);
+  // Set PA0 as input for ADC (no need to explicitly set pinMode for analog
+  // input, but done for clarity)
+  pinMode('A', 1, INPUT);
 
-    uint16_t adc_result;
+  uint16_t adc_result = 0;
 
-    while (1)
-    {
-        // Read the ADC value from channel 1 (PA1)
-        adc_result = adc_read(1);
+  while (1) {
+    // Read the ADC value from channel 1 (PA1)
+    adc_result = adc_read(1);
 
-        // Simple control: If the ADC value is greater than 512, turn on the LED
-        if (adc_result > 512) {
-            digitalWrite('C', 2, HIGH);  // Turn on LED at PB0
-        } else {
-            digitalWrite('C', 2, LOW);   // Turn off LED at PB0
-        }
-
-        _delay_ms(500);  // Delay for debounce
+    if (adc_result > 512) {
+      digitalWrite('C', 2, HIGH);
+    } else if (adc_result < 512) {
+      digitalWrite('C', 7, HIGH);
+    } else {
+      digitalWrite('C', 2, LOW);
+      digitalWrite('C', 7, LOW);
     }
-    return 0;
+
+    _delay_ms(500); // Delay for debounce
+  }
+  return 0;
 }
 
 
